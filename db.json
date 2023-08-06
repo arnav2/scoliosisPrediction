@@ -1,0 +1,58 @@
+{
+  "patients": [
+    {
+      "id": "patient_id1",
+      "name": "patient1",
+      "age": "10",
+      "gender": "Male",
+      "videoUploadStatus": "NOT_UPLOADED",
+      "scoliosisPredictionStatus": "NOT_DECIDED",
+      "pointCloudData":  "Open Video In Modal"
+    },
+    {
+      "id": "patient_id2",
+      "name": "patient2",
+      "age": "30",
+      "gender": "Female",
+      "videoUploadStatus": "UPLOADING",
+      "scoliosisPredictionStatus": "PREDICTING",
+      "pointCloudData":  "Open Video In Modal"
+    },
+    {
+      "id": "patient_id3",
+      "name": "patient3",
+      "age": "40",
+      "gender": "Male",
+      "videoUploadStatus": "UPLOADED",
+      "scoliosisPredictionStatus": "POSITIVE",
+      "pointCloudData":  "Open Video In Modal"
+    },
+    {
+      "id": "QTa3Hy6",
+      "name": "Patient1",
+      "age": 13,
+      "gender": "Female",
+      "videoUploadStatus": "UPLOADED",
+      "scoliosisPredictionStatus": "NEGATIVE",
+      "pointCloudData":  "Open Video In Modal"
+    },
+    {
+      "id": "PH4Iysk",
+      "name": "test",
+      "age": 45,
+      "gender": "Male",
+      "videoUploadStatus": "ERROR_UPLOADING",
+      "scoliosisPredictionStatus": "INCONCLUSIVE",
+      "pointCloudData":  "Open Video In Modal"
+    },
+    {
+      "id": "jAnWhbz",
+      "name": "patient1",
+      "age": 10,
+      "gender": "Other",
+      "videoUploadStatus": "UPLOADED",
+      "scoliosisPredictionStatus": "INCONCLUSIVE",
+      "pointCloudData":  "Open Video In Modal"
+    }
+  ]
+}

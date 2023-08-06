@@ -1,0 +1,17 @@
+.filterRowStyling {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    box-sizing: border-box;
+    margin: 20px;
+    gap: 20px;
+    overflow-x: hidden;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .filterRowStyling {
+        flex-direction: column;
+        align-items: center;
+    }
+}
