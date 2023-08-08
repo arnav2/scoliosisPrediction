@@ -1,12 +1,7 @@
 import React from 'react';
 import { Box, Slider, Typography, Checkbox, FormControlLabel, FormControl, FormLabel, FormGroup } from '@mui/material';
 import './PatientFilters.css';
-
-enum Gender {
-  MALE = 'Male',
-  FEMALE = 'Female',
-  OTHER = 'Other'
-}
+import { Gender } from '../../types';
 
 interface IPatientFilters {
   name: string,

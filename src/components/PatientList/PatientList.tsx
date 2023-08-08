@@ -1,43 +1,9 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination, TableSortLabel, Typography } from '@mui/material';
 import { useState, useEffect } from 'react';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination, TableSortLabel, Typography, Link} from '@mui/material';
 import PointCloudData from '../PointCloudModal/PointCloudModal'; 
-import { Box } from '@mui/material';
-
-enum Gender {
-    MALE = 'Male',
-    FEMALE = 'Female',
-    OTHER = 'Other'
-}
-
-enum SortDirection {
-    ASCENDING = 'asc',
-    DESCENDING = 'desc',
-}
-
-enum UploadStatus {
-    NOT_UPLOADED,
-    UPLOADING,
-    ERROR_UPLOADING,
-    UPLOADED,
-}
-
-enum PredictionStatus {
-    NOT_DECIDED,
-    PREDICTING,
-    POSITIVE,
-    NEGATIVE,
-    INCONCLUSIVE,
-}
-
-export interface IPatient {
-    id: number;
-    name: string;
-    age: number;
-    gender: Gender;
-    videoUploadStatus: UploadStatus;
-    scoliosisPredictionStatus: PredictionStatus;
-    pointCloudData: string;
-}
+import { SortDirection, IPatient} from '../../types';
+import UploadStatusComponent from './UploadStatusComponent';
+import ScoliosisPredictionStatus from './ScoliosisPredictionStatus';
 
 export interface IColumn {
     id: string,
@@ -74,6 +40,7 @@ const sort = (patientList: IPatient[], sortColumn: string, sortDirection: SortDi
 
     return patientList;
 }
+
 
 const PatientList = ({ setOpenModal, openModal, filteredPatients }: PatientListProps) => {
 
@@ -152,9 +119,9 @@ const PatientList = ({ setOpenModal, openModal, filteredPatients }: PatientListP
                                 <TableCell>{patient.name}</TableCell>
                                 <TableCell>{patient.age}</TableCell>
                                 <TableCell>{patient.gender}</TableCell>
-                                <TableCell>{patient.videoUploadStatus}</TableCell>
-                                <TableCell>{patient.scoliosisPredictionStatus}</TableCell>
-                                <TableCell><button onClick={() => handleOpenModal(patient.pointCloudData)}>Open Point Cloud Modal</button></TableCell>
+                                <UploadStatusComponent status={patient.videoUploadStatus}/>
+                                <ScoliosisPredictionStatus status={patient.scoliosisPredictionStatus}/>
+                                <TableCell><button onClick={() => handleOpenModal(patient.pointCloudData)}><Link>Open Point Cloud Modal</Link></button></TableCell>
                             </TableRow>
                         ))
                     ) : (

@@ -5,8 +5,8 @@
       "name": "patient1",
       "age": "10",
       "gender": "Male",
-      "videoUploadStatus": "NOT_UPLOADED",
-      "scoliosisPredictionStatus": "NOT_DECIDED",
+      "videoUploadStatus": "NOT UPLOADED",
+      "scoliosisPredictionStatus": "NOT DECIDED",
       "pointCloudData":  "Open Video In Modal"
     },
     {
@@ -41,7 +41,7 @@
       "name": "test",
       "age": 45,
       "gender": "Male",
-      "videoUploadStatus": "ERROR_UPLOADING",
+      "videoUploadStatus": "ERROR UPLOADING",
       "scoliosisPredictionStatus": "INCONCLUSIVE",
       "pointCloudData":  "Open Video In Modal"
     },

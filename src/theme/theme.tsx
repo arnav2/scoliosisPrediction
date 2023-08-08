@@ -58,7 +58,6 @@ const theme = createTheme({
             fontWeight: 500,
         },
         h3: {
-            textAlign: 'center',
             fontSize: '1 rem',
             fontWeight: 500,
         },
@@ -75,6 +74,13 @@ const theme = createTheme({
                     ...globalWidth
                     // ... continue defining your variables
                 },
+            }
+        },
+        MuiTableCell: {
+            styleOverrides: {
+                root: {
+                    textAlign: 'left',
+                }
             }
         },
         
