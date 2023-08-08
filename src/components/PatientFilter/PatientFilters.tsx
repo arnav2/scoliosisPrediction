@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Slider, Typography, RadioGroup, Checkbox, FormControlLabel, FormControl, FormLabel, FormGroup } from '@mui/material';
+import React from 'react';
+import { Box, Slider, Typography, Checkbox, FormControlLabel, FormControl, FormLabel, FormGroup } from '@mui/material';
 import './PatientFilters.css';
 
 enum Gender {
@@ -43,9 +43,9 @@ const PatientFilters = (props: IPatientFilters) => {
   };
 
   return (
-    <div className="mt-6 flex-row flex space-x-2 md:space-x-8 filterRowStyling px-3">
+    <Box className="mt-6 flex-row flex space-x-2 md:space-x-8 filterRowStyling px-3">
       <FormControl>
-        <FormLabel id="input-filter-name-label"> Name </FormLabel>
+        <FormLabel id="input-filter-name-label"> <Typography variant="h2" component="h2">Name</Typography> </FormLabel>
         <input
           className="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           type="text"
@@ -55,7 +55,7 @@ const PatientFilters = (props: IPatientFilters) => {
         />
       </FormControl>
       <FormControl>
-        <FormLabel id="row-filter-gender-group-label">Gender</FormLabel>
+        <FormLabel id="row-filter-gender-group-label"><Typography variant="h2" component="h2">Gender</Typography></FormLabel>
         <FormGroup
           row
           aria-label="gender"
@@ -83,7 +83,7 @@ const PatientFilters = (props: IPatientFilters) => {
         </FormGroup>
       </FormControl>
       <FormControl>
-        <FormLabel id="age-selection-label">Age Range</FormLabel>
+        <FormLabel id="age-selection-label"><Typography variant="h2" component="h2">Age Range</Typography></FormLabel>
         <Slider
           value={props.ageRange}
           onChange={handleSliderChange}
@@ -98,7 +98,7 @@ const PatientFilters = (props: IPatientFilters) => {
         </Typography>
       </FormControl>
       
-    </div>
+    </Box>
   );
 }
 

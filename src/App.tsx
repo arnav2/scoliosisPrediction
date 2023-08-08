@@ -1,22 +1,21 @@
-import React, {useState} from 'react';
-import './App.tailwind.css';
-import Scene from './components/PointCloudData/PointCloudData';
+import React from 'react';
+import './App.css';
 import NavigationBar from './components/NavigationBar/NavigationBar';
-import { Stack } from '@mui/material';
-import PatientFilter from './components/PatientFilter/PatientFilters';
-import PatientList from './components/PatientList/PatientList';
-import PointCloudData from './components/PointCloudData/PointCloudData';
-import { ThemeProvider, createTheme } from '@mui/material';
-import { StyledEngineProvider } from '@mui/material/styles';
+import {Box, Stack } from '@mui/material';
 import PatientBody from './components/PatientBody/PatientBody';
-
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './theme/theme';
 
 function App() {
   return (
-        <div className="App">
+    <ThemeProvider theme={theme}>
+      <Box sx={{ background: theme.palette.background.default, minHeight: '100vh' }}>
+        <Stack>
           <NavigationBar />
           <PatientBody />
-        </div>
+        </Stack>
+      </Box>
+    </ThemeProvider>
   );
 }
 

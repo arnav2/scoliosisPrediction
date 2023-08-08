@@ -1,0 +1,79 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+:root {
+  --color-purple-50: '#ded4ff';
+  --color-purple-100: '#cabcff';
+  --color-purple-200: '#ad99f7';
+  --color-purple-300: '#8770dd';
+  --color-purple-400: '#6b56ba';
+  --color-purple-500: '#523aa6';
+  --color-purple-600: '#3f2795';
+  --color-purple-700: '#301981';
+  --color-purple-800: '#240e72';
+  --color-purple-900: '#15015b';
+  --color-blue-50: '#f8fafe';
+  --color-blue-100: '#f3f7fd';
+  --color-blue-200: '#e3e8f0';
+  --color-blue-300: '#ced8e2';
+  --color-blue-400: '#94a5b9';
+  --color-blue-500: '#60718b';
+  --color-blue-600: '#3f4f66';
+  --color-blue-700: '#27384e';
+  --color-blue-800: '#101935';
+  --color-blue-900: '#040819';
+  --color-orange-50: '#fef8f7';
+  --color-orange-100: '#fee';
+  --color-orange-200: '#ffe6e0';
+  --color-orange-300: '#ffdbd3';
+  --color-orange-400: '#ffd2c8';
+  --color-orange-500: '#ffc8bc';
+  --color-orange-600: '#ffbfb1';
+  --color-orange-700: '#ffb4a4';
+  --color-orange-800: '#ffa895';
+  --color-orange-900: '#ff9e89';
+  --color-success-50: '#d7ffed';
+  --color-success-100: '#73ebb1';
+  --color-success-200: '#57bd8c';
+  --color-success-300: '#357763';
+  --color-success-400: '#1d4a42';
+  --color-warning-50: '#fffdd8';
+  --color-warning-100: '#ffea95';
+  --color-warning-200: '#ffd66d';
+  --color-warning-300: '#eab653';
+  --color-warning-400: '#d07d00';
+  --color-error-50: '#ffcccf';
+  --color-error-100: '#ff9ba1';
+  --color-error-200: '#da2848';
+  --color-error-300: '#9c0038';
+  --color-error-400: '#62001d';
+  --color-button-primary: '#5865f2';
+  --color-button-primaryhover: '#4651c2';
+  --color-button-primarydisabled: '#f2f4ff';
+  --color-button-secondary: '#fff';
+  --color-button-secondaryhover: '#d9dcfc';
+  --color-button-secondarydisabled: '#bcc2ff';
+  --color-violet-50: '#f2f4ff';
+  --color-violet-100: '#e3e6ff';
+  --color-violet-400: '#a8afff';
+  --color-violet-500: '#98a1ff';
+  --color-violet-800: '#6774ff';
+  --color-violet-900: '#5865f2';
+  --swiper-theme-color: '#007aff';
+}

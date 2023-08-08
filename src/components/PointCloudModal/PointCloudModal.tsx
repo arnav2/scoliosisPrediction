@@ -75,7 +75,7 @@ function PointCloudData({data, setOpenModal, openModal}: PointCloudDatProps) {
     >
       <Fade in={openModal}>
         <Box sx={style}>
-          <div className="modal-content" ref={modalContentRef} />
+          <Box className="modal-content" ref={modalContentRef} />
             <Canvas>
               <ambientLight />
               <pointLight position={[10, 10, 10]} />

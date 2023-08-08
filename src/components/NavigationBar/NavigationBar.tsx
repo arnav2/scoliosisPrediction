@@ -6,27 +6,27 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
+import './NavigationBar.css';
 
 export default function NavigationBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{height: '50px'}}>
-        <Toolbar>
+      <AppBar position="static">
+        <Toolbar sx={{ justifyContent: 'space-between'}}>
+          <Box className={'leftContainer'}>
           <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
-            sx={{ mr: 2 }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography className="companyName" variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography variant="h1" component="h1" sx={{ flexGrow: 1, fontFamily: 'cursive' }}>
             Momentum Health
           </Typography>
-          <div>
+          </Box>
+          <Box>
             <IconButton
               size="large"
               aria-label="Current User Image"
@@ -35,7 +35,7 @@ export default function NavigationBar() {
             >
               <AccountCircle />
             </IconButton>  
-          </div>
+          </Box>
           
         </Toolbar>
       </AppBar>

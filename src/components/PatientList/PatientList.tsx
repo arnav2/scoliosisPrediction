@@ -1,8 +1,7 @@
-// ... (other imports)
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination, TableSortLabel } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination, TableSortLabel, Typography } from '@mui/material';
 import { useState, useEffect } from 'react';
-import PointCloudData from '../PointCloudData/PointCloudData'; 
-
+import PointCloudData from '../PointCloudModal/PointCloudModal'; 
+import { Box } from '@mui/material';
 
 enum Gender {
     MALE = 'Male',
@@ -117,12 +116,12 @@ const PatientList = ({ setOpenModal, openModal, filteredPatients }: PatientListP
     };
 
     return (
-        <div className="outerContainer flex flex-col items-center mt-6 mx-6 box-border border-4">
+        <Paper elevation={6} className="outerContainer flex flex-col items-center mt-6 mx-6 box-border border-4">
             {openModal && (
                 <PointCloudData data={pointCloudData} openModal={openModal} setOpenModal={setOpenModal} />
             )} 
-            <h2 className="text-2xl font-semibold mb-4">Patient List</h2>
-            <TableContainer component={Paper}>
+            <Typography component='h2' variant='h2' className="text-2xl font-semibold mb-4" sx={{pt: 2}}>Patient List</Typography>
+            <TableContainer sx={{background: 'default'}}>
                 <Table>
                     <TableHead>
                         <TableRow>
@@ -134,9 +133,9 @@ const PatientList = ({ setOpenModal, openModal, filteredPatients }: PatientListP
                                         direction={sortDirection}
                                         onClick={() => handleSortChange('name')}
                                     >
-                                        {column.label}
+                                        <Typography component='h3' variant='h3'>{column.label}</Typography>
                                     </TableSortLabel>
-                                ): (<>{column.label}</>
+                                ): (<Typography component='h3' variant='h3'>{column.label}</Typography>
                                 )} 
                                 
                             </TableCell>
@@ -160,8 +159,8 @@ const PatientList = ({ setOpenModal, openModal, filteredPatients }: PatientListP
                         ))
                     ) : (
                         <TableRow>
-                            <TableCell colSpan={3} align="center">
-                                No results found.
+                            <TableCell colSpan={columns.length} align="center">
+                                <Typography color="error.main" >No results found</Typography>
                             </TableCell>
                         </TableRow>
                     )}
@@ -177,7 +176,7 @@ const PatientList = ({ setOpenModal, openModal, filteredPatients }: PatientListP
                 onPageChange={handleChangePage}
                 onRowsPerPageChange={handleChangeRowsPerPage}
             /> 
-        </div>
+        </Paper>
         
     );
 }

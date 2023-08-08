@@ -1,0 +1,12 @@
+.leftContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    position: relative;
+    align-self: center;
+    align-items: center;
+}
+
+.companyName {
+    font-family: Arial, Helvetica, sans-serif;
+}
